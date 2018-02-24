@@ -28,7 +28,7 @@ exports.once = (emitter, event, cb) => {
   })
 }
 
-exports.memoEvent = (calc, manyArgs, vals) => {
+exports.memoEvent = (calc, manyArgs = [], vals = []) => {
   const emitter = new EventEmitter()
   emitter.setMaxListeners(Infinity)
   manyArgs.forEach((args, i) => {
